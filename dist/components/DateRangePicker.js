@@ -20,10 +20,6 @@ var _DateRange = require('./DateRange');
 
 var _DateRange2 = _interopRequireDefault(_DateRange);
 
-var _DefinedRange = require('./DefinedRange');
-
-var _DefinedRange2 = _interopRequireDefault(_DefinedRange);
-
 var _utils = require('../utils.js');
 
 var _classnames = require('classnames');
@@ -41,6 +37,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+//import DefinedRange from './DefinedRange';
+
 
 var DateRangePicker = function (_Component) {
   _inherits(DateRangePicker, _Component);
@@ -67,15 +65,6 @@ var DateRangePicker = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: (0, _classnames2.default)(this.styles.dateRangePickerWrapper, this.props.className) },
-        _react2.default.createElement(_DefinedRange2.default, _extends({
-          focusedRange: focusedRange,
-          onPreviewChange: function onPreviewChange(value) {
-            return _this2.dateRange.updatePreview(value);
-          }
-        }, this.props, {
-          range: this.props.ranges[focusedRange[0]],
-          className: undefined
-        })),
         _react2.default.createElement(_DateRange2.default, _extends({
           onRangeFocusChange: function onRangeFocusChange(focusedRange) {
             return _this2.setState({ focusedRange: focusedRange });
@@ -96,7 +85,8 @@ var DateRangePicker = function (_Component) {
 
 DateRangePicker.defaultProps = {};
 
-DateRangePicker.propTypes = _extends({}, _DateRange2.default.propTypes, _DefinedRange2.default.propTypes, {
+DateRangePicker.propTypes = _extends({}, _DateRange2.default.propTypes, {
+  // ...DefinedRange.propTypes,
   className: _propTypes2.default.string
 });
 
