@@ -213,6 +213,7 @@ var DateRange = function (_Component) {
         displayMode: 'dateRange',
         className: (0, _classnames2.default)(this.styles.dateRangeWrapper, this.props.className),
         onChange: this.setSelection,
+        onAddRange: this.props.onAddRange,
         updateRange: function updateRange(val) {
           return _this2.setSelection(val, false);
         },

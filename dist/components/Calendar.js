@@ -462,7 +462,16 @@ var Calendar = function (_PureComponent) {
               })
             )
           );
-        })
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: 'AddRange' },
+          _react2.default.createElement(
+            'button',
+            { onClick: this.props.onAddRange },
+            'Add Range'
+          )
+        )
       );
     }
   }, {
