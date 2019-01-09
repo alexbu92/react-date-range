@@ -277,6 +277,9 @@ class Calendar extends PureComponent {
           );
         })}
       </div>
+      <div className={'AddRange'}>
+        <button onClick={this.props.onAddRange}>Add Range</button>
+      </div>
     );
   }
   onDragSelectionStart(date) {
