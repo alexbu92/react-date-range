@@ -123,6 +123,7 @@ class DateRange extends Component {
         className={classnames(this.styles.dateRangeWrapper, this.props.className)}
         onChange={this.setSelection}
         onAddRange={this.props.onAddRange}
+        onRemoveRange={this.props.onRemoveRange}
         updateRange={val => this.setSelection(val, false)}
         ref={target => {
           this.calendar = target;

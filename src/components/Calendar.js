@@ -273,6 +273,9 @@ class Calendar extends PureComponent {
                   value={this.formatDateDisplay(range.endDate, 'Continuous')}
                 />
               </span>
+              <span>
+                <button onClick={() => {this.props.onRemoveRange(i)}}>Delete</button>
+              </span>
             </div>
           );
         })}

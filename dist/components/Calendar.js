@@ -460,6 +460,17 @@ var Calendar = function (_PureComponent) {
                 readOnly: true,
                 value: _this4.formatDateDisplay(range.endDate, 'Continuous')
               })
+            ),
+            _react2.default.createElement(
+              'span',
+              null,
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    _this4.props.onRemoveRange(i);
+                  } },
+                'Delete'
+              )
             )
           );
         }),
