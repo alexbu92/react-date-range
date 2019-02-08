@@ -614,7 +614,6 @@ var Calendar = function (_PureComponent) {
           onMouseLeave: function onMouseLeave() {
             _this5.setState({ drag: { status: false, range: {} } });
           } },
-        showDateDisplay && this.renderDateDisplay(),
         navigatorRenderer(focusedDate, this.changeShownDate, this.props),
         scroll.enabled ? _react2.default.createElement(
           'div',
@@ -692,7 +691,8 @@ var Calendar = function (_PureComponent) {
               showMonthName: !isVertical || i > 0
             }));
           })
-        )
+        ),
+        showDateDisplay && this.renderDateDisplay()
       );
     }
   }]);
